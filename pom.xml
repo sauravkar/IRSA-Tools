@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>IRSA Tools></name>
+    <artifactId>irsatools</artifactId>
+    <groupId>com.irsatools</groupId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+
+    <!-- MODULES -->
+    <modules>
+        <module>data-core/domain-model</module>
+        <module>data-core/data-provider</module>
+    </modules>
+
+    <!-- PROPERTIES -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.6</java.version>
+        <skipTests>true</skipTests>
+        <!-- PLUGINS VERSION -->
+        <maven-processor-plugin.version>2.0.0</maven-processor-plugin.version>
+        <build-helper-maven-plugin.version>1.5</build-helper-maven-plugin.version>
+        <maven-surefire-plugin.version>2.12</maven-surefire-plugin.version>
+        <properties-maven-plugin.version>1.0-alpha-2</properties-maven-plugin.version>
+        <maven-compiler-plugin.version>2.3.1</maven-compiler-plugin.version>
+        <sql-maven-plugin.version>1.5</sql-maven-plugin.version>
+        <!-- DEPENDENCIES VERSION -->
+        <postgresql-jdbc-driver>9.0-801.jdbc4</postgresql-jdbc-driver>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>EclipseLink Repo</id>
+            <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo/</url>
+        </repository>
+    </repositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql-jdbc-driver}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <optimize>true</optimize>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                    <configuration>
+                        <skip>${skipTests}</skip>
+                        <argLine>-Xmx256m -XX:MaxPermSize=256m</argLine>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>properties-maven-plugin</artifactId>
+                    <version>${properties-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>read-project-properties</goal>
+                            </goals>
+                            <configuration>
+                                <files>
+                                    <file>${project.basedir}/build.properties</file>
+                                    <file>${project.basedir}/build.${user.name}.properties</file>
+                                </files>
+                                <quiet>true</quiet>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
+
