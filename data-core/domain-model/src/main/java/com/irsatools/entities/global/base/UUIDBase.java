@@ -3,7 +3,7 @@
  * Author: Nikolay Semenov <ns.semenov@gmail.com>
  * Date: 24.02.12
  */
-package com.irsatools.global.entities.base;
+package com.irsatools.entities.global.base;
 
 import org.apache.commons.lang3.StringUtils;
 

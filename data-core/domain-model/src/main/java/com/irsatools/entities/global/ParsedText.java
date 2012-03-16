@@ -3,9 +3,9 @@
  * Author: Nikolay Semenov <ns.semenov@gmail.com>
  * Date: 24.02.12
  */
-package com.irsatools.global.entities;
+package com.irsatools.entities.global;
 
-import com.irsatools.global.entities.base.UUIDBase;
+import com.irsatools.entities.global.base.UUIDBase;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;

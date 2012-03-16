@@ -1,4 +1,4 @@
-package com.irsatools.global.entities.enums;
+package com.irsatools.entities.global.enums;
 
 /**
  * File: SentenceMark
