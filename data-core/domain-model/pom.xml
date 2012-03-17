@@ -23,14 +23,14 @@
             <version>2.0.0</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>postgresql</groupId>
@@ -53,7 +53,8 @@
                         </goals>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <compilerArguments>-Aeclipselink.persistencexml=src/test/resources/META-INF/persistence.xml
+                            <compilerArguments>
+                                -Aeclipselink.persistencexml=src/test/resources/META-INF/persistence.xml
                             </compilerArguments>
                             <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
                             <outputClassDirectory>${basedir}</outputClassDirectory>

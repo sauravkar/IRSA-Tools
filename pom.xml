@@ -11,7 +11,7 @@
     <!-- MODULES -->
     <modules>
         <module>data-core/domain-model</module>
-        <module>data-core/data-provider</module>
+        <module>data-core/jpa-data-provider</module>
     </modules>
 
     <!-- PROPERTIES -->

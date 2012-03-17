@@ -10,5 +10,5 @@ import com.irsatools.entities.global.Research;
 /**
  * Represents the basis for LDA research
  */
-public class LDAResearch extends Research{
+public class LdaResearch extends Research{
 }
