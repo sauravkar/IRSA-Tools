@@ -47,4 +47,13 @@ public class Info {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    public Info() {
+    }
+
+    public Info(String name, String description, String comment) {
+        this.name = name;
+        this.description = description;
+        this.comment = comment;
+    }
 }

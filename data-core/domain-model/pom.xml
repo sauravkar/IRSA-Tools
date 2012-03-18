@@ -9,6 +9,12 @@
     <groupId>com.irsatools</groupId>
     <version>0.0.1</version>
 
+    <!-- Properties -->
+    <properties>
+        <hibernate-jpa-2.0-api.version>1.0.0.Final</hibernate-jpa-2.0-api.version>
+        <eclipselink.version>2.0.0</eclipselink.version>
+    </properties>
+
     <parent>
         <artifactId>irsatools</artifactId>
         <groupId>com.irsatools</groupId>
@@ -18,9 +24,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>javax.persistence</artifactId>
-            <version>2.0.0</version>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>${hibernate-jpa-2.0-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -30,7 +36,7 @@
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
-            <version>2.0.0</version>
+            <version>${eclipselink.version}</version>
         </dependency>
         <dependency>
             <groupId>postgresql</groupId>

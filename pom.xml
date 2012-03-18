@@ -2,32 +2,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <name>IRSA Tools></name>
     <artifactId>irsatools</artifactId>
     <groupId>com.irsatools</groupId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
 
-    <!-- MODULES -->
+    <!-- Modules -->
     <modules>
         <module>data-core/domain-model</module>
         <module>data-core/jpa-data-provider</module>
     </modules>
 
-    <!-- PROPERTIES -->
+    <!-- Properties -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.6</java.version>
         <skipTests>true</skipTests>
-        <!-- PLUGINS VERSION -->
+        <!-- Plugins version -->
         <maven-processor-plugin.version>2.0.0</maven-processor-plugin.version>
         <build-helper-maven-plugin.version>1.5</build-helper-maven-plugin.version>
         <maven-surefire-plugin.version>2.12</maven-surefire-plugin.version>
         <properties-maven-plugin.version>1.0-alpha-2</properties-maven-plugin.version>
         <maven-compiler-plugin.version>2.3.1</maven-compiler-plugin.version>
         <sql-maven-plugin.version>1.5</sql-maven-plugin.version>
-        <!-- DEPENDENCIES VERSION -->
+        <!-- Dependencies version -->
         <postgresql-jdbc-driver>9.0-801.jdbc4</postgresql-jdbc-driver>
+        <spring.version>3.0.5.RELEASE</spring.version>
+        <slf4j.version>1.5.10</slf4j.version>
+        <log4j.version>1.2.15</log4j.version>
+        <junit.version>4.8.2</junit.version>
     </properties>
 
     <repositories>
@@ -39,10 +44,18 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- DB Dependencies -->
             <dependency>
                 <groupId>postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql-jdbc-driver}</version>
+            </dependency>
+            <!-- Test Dependencies -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

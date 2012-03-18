@@ -44,7 +44,7 @@ public class OriginalCorpus extends UUIDBase {
         this.originalTexts = originalTexts;
     }
 
-    @OneToMany(mappedBy = "parentCorpus")
+    @OneToMany
     @JoinColumn(name = "ORIGINAL_CORPUS")
     public List<ParsedCorpus> getPreparedCorpuses() {
         if (preparedCorpuses == null) {

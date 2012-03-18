@@ -20,7 +20,7 @@ public class ParsedText extends UUIDBase {
 
     private List<WordToken> tokens;
 
-    @OneToMany(mappedBy = "parsedText", orphanRemoval = true)
+    @OneToMany(orphanRemoval = true)
     @OrderBy("position ASC")
     public List<WordToken> getTokens() {
         return tokens;
