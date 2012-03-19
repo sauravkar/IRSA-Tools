@@ -1,5 +1,5 @@
 /**
- *  File:   OriginalCorpusRepository
+ *  File:   DictionaryRepository
  *  Author: Nikolay Semenov <ns.semenov@gmail.com>
  *  Date:   17.03.12
  */
