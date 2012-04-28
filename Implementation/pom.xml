@@ -11,8 +11,10 @@
 
     <!-- Modules -->
     <modules>
-        <module>data-core/domain-model</module>
-        <module>data-core/jpa-data-provider</module>
+        <module>irsa-data/domain-model</module>
+        <module>irsa-data/jpa-data-provider</module>
+        <module>irsa-web</module>
+        <module>irsa-distribution</module>
     </modules>
 
     <!-- Properties -->

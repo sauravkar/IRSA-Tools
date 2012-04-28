@@ -1,0 +1,24 @@
+<assembly>
+    <id>jetty</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <unpack>true</unpack>
+            <scope>runtime</scope>
+            <outputDirectory>/</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>irsa-distribution/target/classes</directory>
+            <outputDirectory/>
+        </fileSet>
+        <fileSet>
+            <directory>../irsa-web/target/irsa-web-0.0.1</directory>
+            <outputDirectory/>
+        </fileSet>
+    </fileSets>
+</assembly>
