@@ -1,6 +1,11 @@
+# IntelliJ IDEA files
 *.ipr
 *.iws
 *.iml
 
-/Implementation/data-core/jpa-data-provider/target
-/Implementation/data-core/domain-model/target
+# Maven build-output directory
+target/
+
+# Sub-Projects files
+/Implementation/irsa-data/domain-model/src/test/resources/sql/
+
