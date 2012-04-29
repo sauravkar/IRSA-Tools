@@ -101,9 +101,21 @@
                             <headerType>console</headerType>
                             <outfile>target/${project.artifactId}-${project.version}.exe</outfile>
                             <jar>target/${project.artifactId}-${project.version}.jar</jar>
+                            <errTitle>IRSA-Tools</errTitle>
                             <jre>
                                 <minVersion>${java.version}.0</minVersion>
                             </jre>
+                            <versionInfo>
+                                <fileVersion>${project.version}.0</fileVersion>
+                                <txtFileVersion>${project.version}</txtFileVersion>
+                                <fileDescription>Information Retrieval and Sentiment Analysis Tools</fileDescription>
+                                <productName>IRSA-Tools</productName>
+                                <productVersion>${project.version}.0</productVersion>
+                                <txtProductVersion>${project.version}</txtProductVersion>
+                                <internalName>${project.artifactId}-${project.version}</internalName>
+                                <originalFilename>${project.artifactId}-${project.version}.exe</originalFilename>
+                                <copyright>Copyright © 2012 IRSA-Tools</copyright>
+                            </versionInfo>
                         </configuration>
                     </execution>
                 </executions>
