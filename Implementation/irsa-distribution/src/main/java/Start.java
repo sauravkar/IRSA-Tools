@@ -1,3 +1,8 @@
+/**
+ *  File: Dictionary
+ *  Author: Nikolay Semenov <ns.semenov@gmail.com>
+ *  Date: 28.04.12
+ */
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.webapp.WebAppContext;
 
@@ -6,6 +11,9 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.security.ProtectionDomain;
 
+/**
+ * Launcher class to start embedded jetty server
+ */
 public class Start {
 
     private static int DEFAULT_PORT = Integer.getInteger("port", 8080);
