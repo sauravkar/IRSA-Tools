@@ -5,16 +5,14 @@
 
     <display-name>irsa-web</display-name>
 
-    <!--
-         There are three means to configure Wickets configuration mode and they
-         are tested in the order given.
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:provider-context.xml</param-value>
+    </context-param>
 
-         1) A system property: -Dwicket.configuration
-         2) servlet specific <init-param>
-         3) context specific <context-param>
-
-         The value might be either "development" (reloading when templates change) or
-         "deployment". If no configuration is found, "development" is the default. -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <filter>
         <filter-name>wicket.irsa-web</filter-name>
@@ -22,6 +20,11 @@
         <init-param>
             <param-name>applicationClassName</param-name>
             <param-value>com.irsatools.WicketApplication</param-value>
+        </init-param>
+        <init-param>
+            <param-name>configuration</param-name>
+            <!-- The value might be either "development" or "deployment" -->
+            <param-value>development</param-value>
         </init-param>
     </filter>
 

@@ -32,7 +32,7 @@
         <!-- Dependencies version -->
         <postgresql-jdbc-driver>9.0-801.jdbc4</postgresql-jdbc-driver>
         <spring.version>3.0.5.RELEASE</spring.version>
-        <slf4j.version>1.5.10</slf4j.version>
+        <slf4j.version>1.6.4</slf4j.version>
         <log4j.version>1.2.15</log4j.version>
         <junit.version>4.8.2</junit.version>
     </properties>

@@ -16,11 +16,11 @@ import java.security.ProtectionDomain;
  */
 public class Start {
 
-    private static int DEFAULT_PORT = Integer.getInteger("port", 8080);
+    private static final int DEFAULT_PORT = Integer.getInteger("port", 8080);
 
     public static void main(String[] args) throws Exception {
 
-        Server server = new Server(Integer.getInteger("port", DEFAULT_PORT));
+        Server server = new Server(DEFAULT_PORT);
         WebAppContext appContext = new WebAppContext();
         appContext.setServer(server);
         appContext.setContextPath("/");

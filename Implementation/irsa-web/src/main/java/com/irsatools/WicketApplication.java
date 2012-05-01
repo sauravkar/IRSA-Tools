@@ -1,28 +1,26 @@
+/**
+ *  File: Dictionary
+ *  Author: Nikolay Semenov <ns.semenov@gmail.com>
+ *  Date: 30.04.12
+ */
 package com.irsatools;
 
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
 /**
- * Application object for your web application. If you want to run this application without deploying, run the Start class.
- *
- * @see com.irsatools.Start#main(String[])
+ * The config class for Wicket web application.
  */
 public class WicketApplication extends WebApplication {
-    /**
-     * @see org.apache.wicket.Application#getHomePage()
-     */
+
     @Override
     public Class<HomePage> getHomePage() {
         return HomePage.class;
     }
 
-    /**
-     * @see org.apache.wicket.Application#init()
-     */
     @Override
     public void init() {
-        super.init();
-
-        // add your configuration here
+        getComponentInstantiationListeners().add(new SpringComponentInjector(this));
+        // additional configuration
     }
 }

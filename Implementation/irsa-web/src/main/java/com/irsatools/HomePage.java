@@ -1,3 +1,8 @@
+/**
+ *  File: Dictionary
+ *  Author: Nikolay Semenov <ns.semenov@gmail.com>
+ *  Date: 30.04.12
+ */
 package com.irsatools;
 
 import org.apache.wicket.markup.html.WebPage;
