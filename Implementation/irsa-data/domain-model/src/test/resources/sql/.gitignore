@@ -1,0 +1,6 @@
+# SQL files
+*.sql
+
+# Exclusions
+!1-db-drop.sql
+
