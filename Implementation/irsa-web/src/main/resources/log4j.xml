@@ -32,25 +32,17 @@
         <level value="warn"/>
     </logger>
 
+    <logger name="org.springframework.orm">
+        <level value="warn"/>
+    </logger>
+
     <!-- WEB LAYER LOGGERS -->
     <!-- Wicket -->
     <logger name="org.apache.wicket">
-        <level value="info"/>
+        <level value="warn"/>
     </logger>
 
-    <logger name="org.apache.wicket.protocol.http.HttpSessionStore">
-        <level value="info"/>
-    </logger>
-
-    <logger name="logger.org.apache.wicket.version">
-        <level value="info"/>
-    </logger>
-
-    <logger name="org.apache.wicket.RequestCycle">
-        <level value="info"/>
-    </logger>
-
-    <logger name="org.apache.wicket.RequestListenerInterface">
+    <logger name="org.odlabs.wiquery">
         <level value="warn"/>
     </logger>
 
