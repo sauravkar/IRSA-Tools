@@ -54,11 +54,6 @@
             <version>${wicket.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket-util</artifactId>
-            <version>${wicket.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.odlabs.wiquery</groupId>
             <artifactId>wiquery-core</artifactId>
             <version>${wiquery-core.version}</version>
