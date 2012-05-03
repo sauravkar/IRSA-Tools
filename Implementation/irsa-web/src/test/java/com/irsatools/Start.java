@@ -5,6 +5,7 @@
  */
 package com.irsatools;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.wicket.util.time.Duration;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.bio.SocketConnector;
@@ -37,6 +38,9 @@ public class Start {
         bb.setServer(server);
         bb.setContextPath("/");
         bb.setWar("src/main/webapp");
+        // Setup development environment
+        bb.setDescriptor("src/test/resources/dev-web.xml");
+        DOMConfigurator.configure("src/test/resources/dev-log4j.xml");
 
         // START JMX SERVER
         // MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
