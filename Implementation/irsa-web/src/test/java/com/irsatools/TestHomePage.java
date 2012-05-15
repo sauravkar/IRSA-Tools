@@ -5,6 +5,8 @@
  */
 package com.irsatools;
 
+import com.irsatools.web.BasePage;
+import com.irsatools.web.WicketApplication;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -25,9 +27,9 @@ public class TestHomePage {
     @Ignore
     public void homepageRendersSuccessfully() {
         //start and render the test page
-        tester.startPage(HomePage.class);
+        tester.startPage(BasePage.class);
 
         //assert rendered page class
-        tester.assertRenderedPage(HomePage.class);
+        tester.assertRenderedPage(BasePage.class);
     }
 }

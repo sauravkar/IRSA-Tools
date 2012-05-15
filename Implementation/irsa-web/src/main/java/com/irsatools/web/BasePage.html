@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta charset="utf-8"/>
+    <title>IRSA Tools</title>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/jquery.layout.js"></script>
+    <script type="text/javascript">
+        var settings = {
+            north:{
+                size:100,
+                resizable:false,
+                closable:false},
+            west:{
+                size:150,
+                resizable:false,
+                closable:false},
+            east:{
+                size:300},
+            south:{
+                size:"auto"},
+            applyDefaultStyles:true
+        };
+
+        $(document).ready(function () {
+            $('body').layout(settings);
+        });
+    </script>
+</head>
+<body>
+    <div class="ui-layout-center">Center</div>
+    <div class="ui-layout-north">
+        North
+        <div wicket:id="debug"/>
+    </div>
+    <div class="ui-layout-south">South</div>
+    <div class="ui-layout-east">East</div>
+    <div class="ui-layout-west">West</div>
+</body>
+</html>
