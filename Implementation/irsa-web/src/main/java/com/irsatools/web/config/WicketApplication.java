@@ -5,7 +5,7 @@
  */
 package com.irsatools.web.config;
 
-import com.irsatools.web.pages.Main;
+import com.irsatools.web.page.Main;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
@@ -27,6 +27,6 @@ public class WicketApplication extends WebApplication {
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 
         // Pages and resources
-        mountPackage("/", Main.class);
+//        mountPackage("/", Main.class);
     }
 }

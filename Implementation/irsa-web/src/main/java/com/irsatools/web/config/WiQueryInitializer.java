@@ -20,5 +20,6 @@ public class WiQueryInitializer implements IWiQueryInitializer {
     public void init(Application application, WiQuerySettings wiQuerySettings) {
         wiQuerySettings.setAutoImportJQueryResource(false);
         wiQuerySettings.setAutoImportJQueryUIJavaScriptResource(false);
+        wiQuerySettings.setAutoImportJQueryUIStyleSheetResource(false);
     }
 }

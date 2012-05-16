@@ -1,0 +1,32 @@
+/*
+ * Global styles
+ */
+body {
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+    font-size: 12px;
+}
+
+/*
+ * Layout styles
+ */
+.ui-layout-pane {
+    padding: 0px !important;
+}
+
+.ui-layout-north {
+    border: none;
+}
+
+/*
+ * Main menu styles
+ */
+.main-menu-form-style {
+    margin: 2px;
+}
+
+/*
+ * jQuery UI styles
+ */
+.ui-widget {
+    font-size: 1em;
+}

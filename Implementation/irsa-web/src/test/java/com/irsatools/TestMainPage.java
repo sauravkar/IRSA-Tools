@@ -6,7 +6,7 @@
 package com.irsatools;
 
 import com.irsatools.web.config.WicketApplication;
-import com.irsatools.web.pages.Main;
+import com.irsatools.web.page.Main;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;

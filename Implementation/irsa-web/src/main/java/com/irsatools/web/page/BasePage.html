@@ -3,25 +3,28 @@
 <head>
     <meta charset="utf-8"/>
     <title>IRSA Tools</title>
-    <link rel="stylesheet" type="text/css" href="/css/layout-default.css">
-    <link rel="stylesheet" type="text/css" href="/css/cupertino/jquery-ui-1.8.20.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout/layout-default.css">
+    <link rel="stylesheet" type="text/css" href="/css/theme/pepper-grinder/jquery-ui-1.8.20.css">
+    <link rel="stylesheet" type="text/css" href="/css/irsa/irsa-design.css">
     <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/js/jquery-ui-1.8.20.min.js"></script>
     <script type="text/javascript" src="/js/jquery.layout.min.js"></script>
     <script type="text/javascript">
         var layout_settings = {
             north:{
-                size:30,
+                size:32,
                 resizable:false,
-                closable:false},
+                closable:false,
+                spacing_open:0,
+                spacing_closed:0},
             west:{
                 size:200,
                 minSize:100,
-                maxSize:300},
+                maxSize:400},
             east:{
                 size:300,
                 minSize:200,
-                maxSize:400},
+                maxSize:500},
             south:{
                 size:30,
                 minSize:30,
@@ -35,19 +38,19 @@
 </head>
 <body>
     <div class="ui-layout-north">
-        North
+        <div wicket:id="north-container" class="ui-layout-content">[North]</div>
     </div>
     <div class="ui-layout-west">
-        West
+        <div wicket:id="west-container" class="ui-layout-content">[West]</div>
     </div>
     <div class="ui-layout-center">
-        Center
+        <div wicket:id="center-container" class="ui-layout-content">[Center]</div>
     </div>
     <div class="ui-layout-east">
-        East
+        <div wicket:id="east-container" class="ui-layout-content">[East]</div>
     </div>
     <div class="ui-layout-south">
-        South
+        <div wicket:id="south-container" class="ui-layout-content">[South]</div>
         <div wicket:id="debug"/>
     </div>
 </body>
