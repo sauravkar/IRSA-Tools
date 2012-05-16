@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta charset="utf-8"/>
+    <title>IRSA Tools</title>
+    <link rel="stylesheet" type="text/css" href="/css/layout-default.css">
+    <link rel="stylesheet" type="text/css" href="/css/cupertino/jquery-ui-1.8.20.css">
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.20.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.layout.min.js"></script>
+    <script type="text/javascript">
+        var layout_settings = {
+            north:{
+                size:30,
+                resizable:false,
+                closable:false},
+            west:{
+                size:200,
+                minSize:100,
+                maxSize:300},
+            east:{
+                size:300,
+                minSize:200,
+                maxSize:400},
+            south:{
+                size:30,
+                minSize:30,
+                maxSize:300},
+            applyDefaultStyles:true
+        };
+        $(document).ready(function () {
+            $('body').layout(layout_settings);
+        });
+    </script>
+</head>
+<body>
+    <div class="ui-layout-north">
+        North
+    </div>
+    <div class="ui-layout-west">
+        West
+    </div>
+    <div class="ui-layout-center">
+        Center
+    </div>
+    <div class="ui-layout-east">
+        East
+    </div>
+    <div class="ui-layout-south">
+        South
+        <div wicket:id="debug"/>
+    </div>
+</body>
+</html>

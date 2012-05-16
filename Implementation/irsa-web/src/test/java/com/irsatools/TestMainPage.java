@@ -5,8 +5,8 @@
  */
 package com.irsatools;
 
-import com.irsatools.web.BasePage;
-import com.irsatools.web.WicketApplication;
+import com.irsatools.web.config.WicketApplication;
+import com.irsatools.web.pages.Main;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -15,7 +15,7 @@ import org.junit.Test;
 /**
  * Simple test using the WicketTester
  */
-public class TestHomePage {
+public class TestMainPage {
     private WicketTester tester;
 
     @Before
@@ -25,11 +25,11 @@ public class TestHomePage {
 
     @Test
     @Ignore
-    public void homepageRendersSuccessfully() {
+    public void mainPageRendersSuccessfully() {
         //start and render the test page
-        tester.startPage(BasePage.class);
+        tester.startPage(Main.class);
 
         //assert rendered page class
-        tester.assertRenderedPage(BasePage.class);
+        tester.assertRenderedPage(Main.class);
     }
 }

@@ -1,10 +1,11 @@
 /**
- *  File: Dictionary
+ *  File: WicketApplication
  *  Author: Nikolay Semenov <ns.semenov@gmail.com>
  *  Date: 30.04.12
  */
-package com.irsatools.web;
+package com.irsatools.web.config;
 
+import com.irsatools.web.pages.Main;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
@@ -17,12 +18,15 @@ public class WicketApplication extends WebApplication {
 
     @Override
     public Class getHomePage() {
-        return BasePage.class;
+        return Main.class;
     }
 
     @Override
     public void init() {
+        // Global configuration
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
-        // additional configuration
+
+        // Pages and resources
+        mountPackage("/", Main.class);
     }
 }

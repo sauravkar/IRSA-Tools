@@ -1,9 +1,9 @@
 /**
- *  File: BasePage
+ *  File: Main
  *  Author: Nikolay Semenov <ns.semenov@gmail.com>
  *  Date: 15.05.12
  */
-package com.irsatools.web;
+package com.irsatools.web.pages;
 
 import org.apache.wicket.devutils.debugbar.DebugBar;
 import org.apache.wicket.markup.html.WebPage;
@@ -11,9 +11,9 @@ import org.apache.wicket.markup.html.WebPage;
 /**
  * @author N.Semenov
  */
-public class BasePage extends WebPage {
+public class Main extends WebPage {
 
-    public BasePage() {
+    public Main() {
         add(new DebugBar("debug"));
     }
 }
