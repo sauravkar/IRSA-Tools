@@ -7,24 +7,33 @@ package com.irsatools;
 
 import com.irsatools.web.config.WicketApplication;
 import com.irsatools.web.pages.Main;
+import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Simple test using the WicketTester
  */
 public class TestMainPage {
+
     private WicketTester tester;
 
     @Before
     public void setUp() {
-        tester = new WicketTester(new WicketApplication());
+        WicketApplication application = new WicketApplication() {
+            @Override
+            public void init() {
+                ApplicationContext context = new ClassPathXmlApplicationContext("classpath:provider-context.xml");
+                getComponentInstantiationListeners().add(new SpringComponentInjector(this, context, true));
+            }
+        };
+        tester = new WicketTester(application);
     }
 
     @Test
-    @Ignore
     public void mainPageRendersSuccessfully() {
         //start and render the test page
         tester.startPage(Main.class);
