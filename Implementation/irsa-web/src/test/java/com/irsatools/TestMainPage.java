@@ -6,7 +6,7 @@
 package com.irsatools;
 
 import com.irsatools.web.config.WicketApplication;
-import com.irsatools.web.page.Main;
+import com.irsatools.web.page.MainPage;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
@@ -36,9 +36,9 @@ public class TestMainPage {
     @Test
     public void mainPageRendersSuccessfully() {
         //start and render the test page
-        tester.startPage(Main.class);
+        tester.startPage(MainPage.class);
 
         //assert rendered page class
-        tester.assertRenderedPage(Main.class);
+        tester.assertRenderedPage(MainPage.class);
     }
 }

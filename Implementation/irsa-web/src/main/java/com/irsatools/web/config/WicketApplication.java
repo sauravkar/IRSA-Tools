@@ -5,7 +5,7 @@
  */
 package com.irsatools.web.config;
 
-import com.irsatools.web.page.Main;
+import com.irsatools.web.page.MainPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
@@ -18,13 +18,14 @@ public class WicketApplication extends WebApplication {
 
     @Override
     public Class getHomePage() {
-        return Main.class;
+        return MainPage.class;
     }
 
     @Override
     public void init() {
         // Global configuration
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
+
 
         // Pages and resources
 //        mountPackage("/", Main.class);

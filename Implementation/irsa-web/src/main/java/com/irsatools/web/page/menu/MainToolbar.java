@@ -1,9 +1,9 @@
 /**
- *  File: MainMenu
+ *  File: MainToolbar
  *  Author: Nikolay Semenov <nsemenov@reksoft.ru>
  *  Date: 16.05.12
  */
-package com.irsatools.web.component;
+package com.irsatools.web.page.menu;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxButton;
@@ -17,9 +17,9 @@ import org.odlabs.wiquery.ui.themes.UiIcon;
  *
  * @author N.Semenov
  */
-public class MainMenu extends Panel {
+public class MainToolbar extends Panel {
 
-    public MainMenu(String id) {
+    public MainToolbar(String id) {
         super(id);
 
         Form<String> mainMenuForm = new Form<String>("main-menu-form");
