@@ -1,9 +1,26 @@
 /*
  * Global styles
  */
+* {
+    margin: 0px;
+    padding: 0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
     font-size: 12px;
+    min-width: 800px;
+}
+
+#body_container {
+    margin: 0 auto;
+    min-width: 1024px;
+    width: 100%;
+    min-height: 600px;
+    height: 100%;
 }
 
 /*
@@ -22,6 +39,10 @@ body {
  */
 .main-menu-form-style {
     margin: 2px;
+}
+
+.main-menu-form-style button {
+    height: 28;
 }
 
 /*
