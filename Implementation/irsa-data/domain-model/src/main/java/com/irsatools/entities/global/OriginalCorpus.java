@@ -8,10 +8,8 @@ package com.irsatools.entities.global;
 import com.irsatools.entities.global.base.Info;
 import com.irsatools.entities.global.base.UUIDBase;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +23,14 @@ public class OriginalCorpus extends UUIDBase {
     private List<OriginalText> originalTexts;
     private List<ParsedCorpus> preparedCorpuses;
 
+    public OriginalCorpus() {}
+
+    public OriginalCorpus(Info corpusInfo, List<OriginalText> originalTexts) {
+        this.corpusInfo = corpusInfo;
+        this.originalTexts = originalTexts;
+        this.preparedCorpuses = new ArrayList<ParsedCorpus>();
+    }
+    
     @Embedded
     public Info getCorpusInfo() {
         return corpusInfo;
@@ -34,7 +40,7 @@ public class OriginalCorpus extends UUIDBase {
         this.corpusInfo = corpusInfo;
     }
 
-    @OneToMany(orphanRemoval = true)
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "ORIGINAL_CORPUS", nullable = false)
     public List<OriginalText> getOriginalTexts() {
         if (originalTexts == null) {

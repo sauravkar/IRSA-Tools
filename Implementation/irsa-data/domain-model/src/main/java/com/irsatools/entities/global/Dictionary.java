@@ -23,6 +23,12 @@ public class Dictionary extends UUIDBase {
     private List<DictionaryWord> words;
     private Info info;
 
+    public Dictionary() {}
+
+    public Dictionary(List<DictionaryWord> words) {
+        this.words = words;
+    }
+
     @OneToMany(orphanRemoval = true)
     @JoinColumn(name = "DICTIONARY", nullable = false)
     public List<DictionaryWord> getWords() {

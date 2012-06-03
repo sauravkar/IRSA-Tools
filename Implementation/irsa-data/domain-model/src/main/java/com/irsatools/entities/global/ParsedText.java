@@ -20,6 +20,12 @@ public class ParsedText extends UUIDBase {
 
     private List<WordToken> tokens;
 
+    public ParsedText() {}
+
+    public ParsedText(List<WordToken> tokens) {
+        this.tokens = tokens;
+    }
+
     @OneToMany(orphanRemoval = true)
     @OrderBy("position ASC")
     public List<WordToken> getTokens() {

@@ -15,6 +15,7 @@
         <module>irsa-data/jpa-data-provider</module>
         <module>irsa-web</module>
         <module>irsa-distribution</module>
+        <module>data-import</module>
     </modules>
 
     <!-- Properties -->

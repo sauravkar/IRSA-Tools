@@ -20,6 +20,12 @@ public class OriginalText extends UUIDBase {
 
     private String data;
 
+    public OriginalText() {}
+
+    public OriginalText(String data) {
+        this.data = data;
+    }
+    
     @Lob
     public String getData() {
         return data;
