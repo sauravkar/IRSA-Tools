@@ -18,6 +18,14 @@
     </properties>
 
     <dependencies>
+        <!-- Project war dependency-->
+        <dependency>
+            <groupId>com.irsatools</groupId>
+            <artifactId>irsa-web</artifactId>
+            <version>0.0.1</version>
+            <scope>provided</scope>
+            <classifier>classes</classifier>
+        </dependency>
         <!-- Jetty dependencies -->
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
