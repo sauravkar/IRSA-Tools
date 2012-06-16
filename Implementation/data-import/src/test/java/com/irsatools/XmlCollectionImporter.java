@@ -1,6 +1,6 @@
 package com.irsatools;
 
-import com.irsatools.conversion.SimpleTextParser;
+import com.irsatools.conversion.SimpleCorpusParser;
 import com.irsatools.conversion.XmlCollectionSAXHandler;
 import com.irsatools.entities.global.OriginalCorpus;
 import com.irsatools.entities.global.OriginalText;
@@ -64,7 +64,7 @@ public class XmlCollectionImporter {
     public void parseCorpus() {
         List<OriginalCorpus> corpuses = originalCorpusRepository.findAll();
         for (OriginalCorpus corpus : corpuses) {
-            new SimpleTextParser().parseCorpus(corpus);
+            new SimpleCorpusParser().parseCorpus(corpus);
         }
     }
 

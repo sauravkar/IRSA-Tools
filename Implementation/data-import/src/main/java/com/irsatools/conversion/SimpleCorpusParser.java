@@ -14,16 +14,19 @@ import java.util.Map;
  * Date: 6/3/12
  * Time: 1:21 AM
  */
-public class SimpleTextParser {
+public class SimpleCorpusParser implements CorpusParser {
+    @Override
     public ParsedCorpus parseCorpus(OriginalCorpus originalCorpus) {
-        // we want those
+        // we want those as result
         List<DictionaryWord> words = new ArrayList<DictionaryWord>();
         List<ParsedText> parsedTexts = new ArrayList<ParsedText>();
 
+        // here we store words that we met before
         Map<String, DictionaryWord> wordMapping = new HashMap<String, DictionaryWord>();
         for (OriginalText originalText : originalCorpus.getOriginalTexts()) {
             List<WordToken> textTokens = new ArrayList<WordToken>();
 
+            // NOTE: important thing is how we split the text
             String text = originalText.getData().replaceAll("[\"]", " ");
             String[] tokens = text.split("\\s");
             for (int i = 0; i < tokens.length; i++) {
@@ -44,6 +47,8 @@ public class SimpleTextParser {
     }
 
     private WordToken parseToken(String token, Map<String, DictionaryWord> wordMapping) {
+        // NOTE: important thing is how we parse the token
+        // TODO: implement
         throw new NotImplementedException();
     }
 }
