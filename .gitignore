@@ -1,4 +1,5 @@
 # IntelliJ IDEA files
+.idea/
 *.ipr
 *.iws
 *.iml
